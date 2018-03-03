@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Success</title>
+</head>
+<body>
+	<h1>Entered data:</h1>
+	<form method="get" action="/" th:object="${form}">
+		<p th:text="*{name}+' '+*{last}"></p>
+		<p th:text="*{age}"></p>
+		<p th:text="*{email}"></p>
+		<p th:text="'English: '+*{language}"></p>
+		<p th:text="'Płeć: ' + *{gender}"></p>
+		<input type="button" value="Correction" onclick="history.back()"/>
+		<input type="submit" value="Add another" />
+	
+	</form>
+</body>
+</html>

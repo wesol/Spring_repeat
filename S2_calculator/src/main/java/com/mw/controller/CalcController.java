@@ -18,28 +18,28 @@ public class CalcController {
 		String description = "";
 		Double result = 0.0d;
 		
-		switch (operation) {
-		case "+":
-			description = "Addiction";
-			result = a + b;
-			break;
-		case "-":
-			description = "Substraction";
-			result = a - b;
-			break;
-		case "*":
-			description = "Multiplication";
-			result = a * b;
-			break;
-		case "/":
-			description = "Division";
-			result = a / b;
-			break;
-
-		}
+			switch (operation) {
+			case "+":
+				description = "Addiction";
+				result = a + b;
+				break;
+			case "-":
+				description = "Substraction";
+				result = a - b;
+				break;
+			case "*":
+				description = "Multiplication";
+				result = a * b;
+				break;
+			case "/":
+				description = "Division";
+				result = a / b;
+				break;
+			}
 		
-		System.out.println(description + " result: " + result);
-
-		return "calc";
+			System.out.println(description + " result: " + result);
+			return "result";
+		
+			
 	}
 }

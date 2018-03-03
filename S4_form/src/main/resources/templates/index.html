@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<meta charset="UTF-8" />
+<title>Form</title>
+</head>
+<body>
+	<form th:action="@{/add}" method="post" th:object="${form}">
+		<p>
+			<label for="name">Imię</label>
+			<input id="name" type="text" th:field = "*{name}" placeholder="Wprowadź imię"/>
+		</p>
+		<p>
+			<label for="last">Nazwisko</label>
+			<input id="last" type="text" th:field = "*{last}" placeholder="Wprowadź nazwisko"/>
+	 	</p>
+		<p>
+			<label for="number" >Wiek</label>
+			<input id="age" type="number" min="0" th:field = "*{age}"/>
+		</p>
+		<p>
+			<label for="email">email</label>
+			<input id="email" type="email" th:field = "*{email}" placeholder="Wprowadź email"/>
+		</p>
+
+		<p>
+			Poziom języka: 
+			<label for="basic">Podstawowy</label>
+			<input type="radio" name="language" value="basic" id="basic" th:field="*{language}"/>
+			<label for="intermediate">Średniozaawansowany</label>
+			<input type="radio"	name="language" value="intermediate" id="intermediate" th:field="*{language}" th:checked="*{language}"/>
+			<label for="advanced">Zaawansowany</label>
+			<input type="radio" name="language" value="advanced" id="advanced" th:field="*{language}"/>
+		</p>
+		<p>
+			<label for="gender">Płeć</label>
+			<select th:field="*{gender}" id="gender">
+				<option value="male">Mężczyzna</option>
+				<option value="female">Kobieta</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit" value="Zapisz" />
+		</p>
+	</form>
+
+</body>
+</html>

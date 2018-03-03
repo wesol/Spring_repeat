@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Calculator</title>
+</head>
+<body>
+	<h1>Calculator</h1>
+	
+	<form action="/calc" method="post">
+		<p>
+			<label for="a">a</label>
+			<input type="text" id="a" name="a"/>
+		</p>
+		<p>
+			<label for="b">b</label>
+			<input type="text" id="b" name="b"/>
+		</p>
+		<select name = "operation">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<p>
+			<input type="submit" value="Count"/>
+		</p>
+	</form>
+</body>
+</html>
